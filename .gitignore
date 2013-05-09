@@ -1,3 +1,11 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
 /dist/
 /nbproject/private/
 /nbproject/project.properties
