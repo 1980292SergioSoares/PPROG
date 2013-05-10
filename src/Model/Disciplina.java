@@ -12,24 +12,24 @@ public class Disciplina {
     
     private String sigla;
     private String designacao;
-    private int horasteoricas;  
-    private int horaspraticas;
+    private Tempo horasteoricassemanais;  
+    private Tempo horaspraticassemanais;
     //TODO
     // adicionar lista de professores
     
-    public Disciplina(String sigla, String designacao, int horasteoricas, int horaspraticas) {
+    public Disciplina(String sigla, String designacao, Tempo horasteoricas, Tempo horaspraticas) {
         setDisciplina(sigla, designacao, horasteoricas, horaspraticas);
     }
     
     protected Disciplina(){
-        this("sem sigla", "sem designação", 0, 0);
+        this("sem sigla", "sem designação", new Tempo(), new Tempo());
     }
 
     public Disciplina(Disciplina disciplina) {
         sigla = disciplina.sigla;
         designacao = disciplina.designacao;
-        horasteoricas = disciplina.horasteoricas;
-        horaspraticas = disciplina.horasteoricas;
+        horasteoricassemanais = disciplina.horasteoricassemanais;
+        horaspraticassemanais = disciplina.horasteoricassemanais;
     }
    
     /**
@@ -61,34 +61,34 @@ public class Disciplina {
     }
 
     /**
-     * @return the horasteoricas
+     * @return the horasteoricassemanais
      */
-    public int getHorasteoricas() {
-        return horasteoricas;
+    public Tempo getHorasteoricas() {
+        return horasteoricassemanais;
     }
 
     /**
-     * @param horasteoricas the horasteoricas to set
+     * @param horasteoricassemanais the horasteoricassemanais to set
      */
-    public void setHorasteoricas(int horasteoricas) {
-        this.horasteoricas = horasteoricas;
+    public void setHorasteoricas(Tempo horasteoricas) {
+        this.horasteoricassemanais = horasteoricas;
     }
 
     /**
-     * @return the horaspraticas
+     * @return the horaspraticassemanais
      */
-    public int getHoraspraticas() {
-        return horaspraticas;
+    public Tempo getHoraspraticas() {
+        return horaspraticassemanais;
     }
 
     /**
-     * @param horaspraticas the horaspraticas to set
+     * @param horaspraticassemanais the horaspraticassemanais to set
      */
-    public void setHoraspraticas(int horaspraticas) {
-        this.horaspraticas = horaspraticas;
+    public void setHoraspraticas(Tempo horaspraticas) {
+        this.horaspraticassemanais = horaspraticas;
     }
     
-    public void setDisciplina(String sigla, String designacao, int horasteoricas, int horaspraticas) {
+    public void setDisciplina(String sigla, String designacao, Tempo horasteoricas, Tempo horaspraticas) {
         setSigla(sigla);
         setDesignacao(designacao);
         setHorasteoricas(horasteoricas);
