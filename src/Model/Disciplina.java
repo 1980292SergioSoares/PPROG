@@ -21,8 +21,12 @@ public class Disciplina {
         setDisciplina(sigla, designacao, horasteoricas, horaspraticas);
     }
     
+    protected Disciplina(String sigla, String descricao){
+        this(sigla, descricao, new Tempo(), new Tempo());
+    }
+    
     protected Disciplina(){
-        this("sem sigla", "sem designação", new Tempo(), new Tempo());
+        this("", "");
     }
 
     public Disciplina(Disciplina disciplina) {
@@ -43,7 +47,7 @@ public class Disciplina {
      * @param sigla the sigla to set
      */
     public void setSigla(String sigla) {
-        this.sigla = sigla;
+        this.sigla = sigla.isEmpty() ? "sem sigla" : sigla;
     }
 
     /**
@@ -57,7 +61,7 @@ public class Disciplina {
      * @param designacao the designacao to set
      */
     public void setDesignacao(String designacao) {
-        this.designacao = designacao;
+        this.designacao = designacao.isEmpty() ? "sem designação" : designacao;
     }
 
     /**
