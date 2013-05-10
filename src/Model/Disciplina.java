@@ -104,4 +104,12 @@ public class Disciplina {
     public Disciplina clone() {
         return new Disciplina(this);
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || this.getClass() != obj.getClass()) return false;        
+        Disciplina d = (Disciplina) obj;
+        return sigla.equalsIgnoreCase(d.sigla) && sigla.equalsIgnoreCase(d.sigla);
+    }
 }
