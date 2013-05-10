@@ -8,6 +8,6 @@ package Model;
  *
  * @author soaressf
  */
-public enum TipoSala {
-    LABORATÓRIO, ANFITEATRO
+public enum TipoSala {    
+    LABORATÓRIO, ANFITEATRO, SEMTIPO;  
 }

@@ -21,11 +21,11 @@ public class Disciplina {
         setDisciplina(sigla, designacao, horasteoricas, horaspraticas);
     }
     
-    protected Disciplina(String sigla, String descricao){
+    public Disciplina(String sigla, String descricao){
         this(sigla, descricao, new Tempo(), new Tempo());
     }
     
-    protected Disciplina(){
+    public Disciplina(){
         this("", "");
     }
 
